@@ -1,0 +1,43 @@
+//All Structural Commands for Part 2 - NOTE: "///" indicates a command that is expected to be invalid. "//" indicates a command that I have not translated yet or that I am not sure if it is 100% correct
+
+
+Declare rudder controller rudder_controller1 with rudder rudder1
+
+
+Declare elevator controller elevator_controller1 with elevators elevator1 elevator2
+///Declare elevator controller elevator_controller2 with elevators elevator1 elevator3
+
+
+
+Declare aileron controller aileron_controller1 with ailerons aileron1 aileron2 primary aileron1
+
+
+Declare aileron controller aileron_controller2 with ailerons aileron1 aileron3 aileron5 aileron7 aileron8 aileron6 aileron4 aileron2 primary aileron1
+
+Declare aileron controller aileron_controller4 with ailerons aileron1 aileron3 aileron5 aileron7 aileron8 aileron6 aileron4 aileron2 primary aileron3 slave aileron7 to aileron3 by 80 percent slave aileron5 to aileron7 by 50 percent slave aileron1 to aileron5 by 75 percent
+
+
+///Declare aileron controller aileron_controller5 with ailerons aileron1 aileron2 primary aileron2
+///Declare aileron controller aileron_controller6 with ailerons aileron1 aileron3 aileron2 aileron5 primary aileron1
+///Declare aileron controller aileron_controller7 with ailerons aileron1 aileron3 aileron2 primary aileron1
+
+
+
+Declare flap controller flap_controller1 with flaps flap_split1 flap_split2
+///Declare flap controller flap_controller2 with flaps flap_split1 flap_split3
+///Declare flap controller flap_controller3 with flaps flap_split1 flap_fowler1
+//Declare flap controller flap_controller4 with flaps flap_fowler1 flap_fowler2 flap_split1 flap_split2
+//Declare flap controller flap_controller5 with flaps flap_fowler1 flap_split2 flap_split1 flap_fowler2
+///Declare flap controller flap_controller6 with flap_fowler1 flap_fowler2 flap_split1
+
+
+
+Declare engine controller engine_controller1 with engine engine1
+Declare engine controller engine_controller2 with engine engine1 engine2
+Declare engine controller engine_controller3 with engine engine1 engine2 engine3
+///Declare engine controller engine_controller4 with engine engine1 engine2 engine4
+
+
+
+Declare gear controller gear_controller1 with gear nose gear_nose2 main gear_main1 gear_main2
+///Declare gear controller gear_controller3 with gear nose gear_nose1 main gear_main1 gear_main3

@@ -1,0 +1,77 @@
+Create rudder rudder1 with limit 45 speed 10 acceleration 0.1 
+
+Create elevator elevator1 with limit 30 speed 10 acceleration 0.1 ; Create elevator elevator2 with limit 30 speed 10 acceleration 0.1
+Create elevator elevator3 with limit 30 speed 10 acceleration 0.15
+
+Create aileron aileron1 with limit up 90 down 40 speed 5 acceleration 0.1 ; Create aileron aileron2 with limit up 90 down 40 speed 5 acceleration 0.1
+Create aileron aileron3 with limit up 90 down 30 speed 5 acceleration 0.15 ; Create aileron aileron4 with limit up 90 down 30 speed 5 acceleration 0.15
+Create aileron aileron5 with limit up 90 down 35 speed 5 acceleration 0.2 ; Create aileron aileron6 with limit up 90 down 35 speed 5 acceleration 0.2
+Create aileron aileron7 with limit up 90 down 45 speed 6 acceleration 0.25 ; Create aileron aileron8 with limit up 90 down 45 speed 6 acceleration 0.25
+
+Create split flap flap_split1 with limit 50 speed 5 acceleration 0.15 ; Create split flap flap_split2 with limit 50 speed 5 acceleration 0.15 
+Create split flap flap_split3 with limit 50 speed 4 acceleration 0.15
+Create Fowler flap flap_fowler1 with limit 55 speed 4 acceleration 0.1 ; create fowler flap flap_fowler2 with limit 55 speed 4 acceleration 0.1
+Create Fowler flap flap_fowler3 with limit 50 speed 4 acceleration 0.1
+
+Create engine engine1 with speed 10 acceleration 0.2 ; Create engine engine2 with speed 10 acceleration 0.2 ; Create engine engine3 with speed 10 acceleration 0.2
+Create engine engine4 with speed 10 acceleration 0.25
+
+Create nose gear gear_nose1 with speed 10 acceleration 0.1
+Create nose gear gear_nose2 with speed 10 acceleration 0.15
+Create main gear gear_main1 with speed 10 acceleration 0.1 ; create main gear gear_main2 with speed 10 acceleration 0.1
+Create main gear gear_main3 with speed 10 acceleration 0.2
+
+
+
+
+
+
+
+
+Declare rudder controller rudder_controller1 with rudder rudder1
+
+
+Declare elevator controller elevator_controller1 with elevators elevator1 elevator2
+///Declare elevator controller elevator_controller2 with elevators elevator1 elevator3
+
+
+//aileron controller - ask if test 2 should actually be an invalid one, ask if that is how test 3 should look and if you cant run it if you also run test 1, ask what number 4 means
+
+//Declare aileron controller aileron_controller1 with ailerons aileron1 aileron2 primary aileron1
+
+//I think this command is an invalid one
+///Declare aileron controller aileron_controller2 with ailerons aileron1 aileron3 aileron5 aileron7 primary aileron1 ; Declare aileron controller aileron_controller3 with ailerons aileron8 aileron6 aileron4 aileron2 primary aileron8
+
+Declare aileron controller aileron_controller4 with ailerons aileron1 aileron3 aileron5 aileron7 primary aileron3 slave aileron7 to aileron3 by 80 percent slave aileron5 to aileron7 by 50 percent slave aileron1 to aileron5 by 75 percent
+
+//4. This test has been eliminated.
+
+///Declare aileron controller aileron_controller5 with ailerons aileron1 aileron2 primary aileron2
+///Declare aileron controller aileron_controller6 with ailerons aileron1 aileron3 primary aileron1 ; Declare aileron controller aileron_controller6 with ailerons aileron2 aileron5 primary aileron2
+///Declare aileron controller aileron_controller7 with ailerons aileron1 aileron3 primary aileron1 ; Declare aileron controller aileron_controller7 with ailerons aileron1 aileron2 primary aileron1
+
+
+
+Declare flap controller flap_controller1 with flaps flap_split1 flap_split2
+///Declare flap controller flap_controller2 with flaps flap_split1 flap_split3
+///Declare flap controller flap_controller3 with flaps flap_split1 flap_fowler1
+//Declare flap controller flap_controller4 with flaps flap_fowler1 flap_fowler2 inboard and flap_split1 and flap_split2 outboard.
+//Declare flap controller flap_controller5 with flaps flap_fowler1 and flap_split2 inboard and flap_split1 and flap_fowler2 outboard.
+///Declare flap controller flap_controller6 with flap_fowler1 flap_fowler2 flap_split1
+
+
+
+//engine controller - ask if commands 2 and 3 should be invalid if you do command 1 first - error message for both: component engine1 already bound to bus engine_controller1_bus
+Declare engine controller engine_controller1 with engine engine1
+Declare engine controller engine_controller2 with engine engine1 engine2
+Declare engine controller engine_controller3 with engine engine1 engine2 engine3
+///Declare engine controller engine_controller4 with engine engine1 engine2 engine4
+
+
+
+Declare gear controller gear_controller1 with gear nose gear_nose2 main gear_main1 gear_main2
+///Declare gear controller gear_controller3 with gear nose gear_nose1 main gear_main1 gear_main3
+
+
+
+

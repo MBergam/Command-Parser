@@ -1,0 +1,55 @@
+//All Creational Commands to test for Part 2 - NOTE: '//' is used to seperate the different sections
+
+Create rudder rudder1 with limit 45 speed 10 acceleration 0.1 
+
+//
+
+Create elevator elevator1 with limit 30 speed 10 acceleration 0.1
+Create elevator elevator2 with limit 30 speed 10 acceleration 0.1
+
+Create elevator elevator3 with limit 30 speed 10 acceleration 0.15
+
+//
+
+Create aileron aileron1 with limit up 90 down 40 speed 5 acceleration 0.1 
+Create aileron aileron2 with limit up 90 down 40 speed 5 acceleration 0.1
+
+Create aileron aileron3 with limit up 90 down 30 speed 5 acceleration 0.15 
+Create aileron aileron4 with limit up 90 down 30 speed 5 acceleration 0.15
+
+Create aileron aileron5 with limit up 90 down 35 speed 5 acceleration 0.2 
+Create aileron aileron6 with limit up 90 down 35 speed 5 acceleration 0.2
+
+Create aileron aileron7 with limit up 90 down 45 speed 6 acceleration 0.25
+Create aileron aileron8 with limit up 90 down 45 speed 6 acceleration 0.25
+
+//
+
+Create split flap flap_split1 with limit 50 speed 5 acceleration 0.15 
+Create split flap flap_split2 with limit 50 speed 5 acceleration 0.15 
+
+Create split flap flap_split3 with limit 50 speed 4 acceleration 0.15
+
+Create Fowler flap flap_fowler1 with limit 55 speed 4 acceleration 0.1
+create fowler flap flap_fowler2 with limit 55 speed 4 acceleration 0.1
+
+Create Fowler flap flap_fowler3 with limit 50 speed 4 acceleration 0.1
+
+//
+
+Create engine engine1 with speed 10 acceleration 0.2 
+Create engine engine2 with speed 10 acceleration 0.2 
+Create engine engine3 with speed 10 acceleration 0.2
+
+Create engine engine4 with speed 10 acceleration 0.25
+
+//
+
+Create nose gear gear_nose1 with speed 10 acceleration 0.1
+
+Create nose gear gear_nose2 with speed 10 acceleration 0.15
+
+Create main gear gear_main1 with speed 10 acceleration 0.1
+create main gear gear_main2 with speed 10 acceleration 0.1
+
+Create main gear gear_main3 with speed 10 acceleration 0.2
